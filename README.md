@@ -1,6 +1,6 @@
-# t3langtools README
+# inf6langtools README
 
-This is the README for your extension "t3langtools". After writing up a brief description, we recommend including the following sections.
+This is the README for your extension "inf6langtools". After writing up a brief description, we recommend including the following sections.
 
 ## Features
 
