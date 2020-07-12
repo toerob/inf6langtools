@@ -1,5 +1,6 @@
 {
 	"name": "inf6langtools",
+	"publisher": "tomasoberg",
 	"displayName": "inf6langtools",
 	"description": "Inform 6 extension that provides language utilities such as outliner, mapper etc.",
 	"version": "0.0.1",
