@@ -10,8 +10,8 @@ import * as vscode from 'vscode';
 import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient';
 
 // Name of the launcher class which contains the main.
-const main: string = 'StdioLauncher';
-
+//const main: string = 'StdioLauncher';
+const main: string = 'org.eclipse.xtext.ide.server.ServerLauncher';
 
 
 
