@@ -1,61 +1,64 @@
 /* --------------------------------------------------------------------------------------------
- * Copyright (c) Microsoft Corporation. All rights reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
+ * Copyright (c) 2020 Tomas Öberg 
+ * Built from the example provided by Microsoft and licensed under the MIT License. 
+ * See License.txt in the project root for license information.
  * ------------------------------------------------------------------------------------------ */
-
+import * as net from 'net';
 import * as path from 'path';
 import * as vscode from 'vscode';
 
-// Import the language client, language client options and server options from VSCode language client.
-import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient';
+import { LanguageClient, LanguageClientOptions, ServerOptions, StreamInfo, Trace } from 'vscode-languageclient';
 
-// Name of the launcher class which contains the main.
-//const main: string = 'StdioLauncher';
 const main: string = 'org.eclipse.xtext.ide.server.ServerLauncher';
 
-
-
 export function activate(context: vscode.ExtensionContext) {
-	console.log('Congratulations, Inform6 language tools extension is now active!');
-
-	// Get the java home from the process environment.
+	console.log('The Inform6 language tools extension is now being activated');
 	const { JAVA_HOME } = process.env;
-
 	console.log(`Using java from JAVA_HOME: ${JAVA_HOME}`);
-	// If java home is available continue.
 	if (JAVA_HOME) {
-		// Java execution path.
 		let excecutable: string = path.join(JAVA_HOME, 'bin', 'java');
-
-		// path to the launcher.jar
 		let classPath = path.join(__dirname, '..', 'launcher', 'launcher.jar');
 		const args: string[] = ['-cp', classPath];
 
+		// The server is a started as a separate app and listens on port 5007
+		// It is used purely for debugging with socket server running in eclipse 
+		/*
+		let connectionInfo = { port: 5007 };
+		let serverOptions = () => {
+			// Connect to language server via socket
+			let socket = net.connect(connectionInfo);
+			let result: StreamInfo = {
+				writer: socket,
+				reader: socket
+			};
+			return Promise.resolve(result);
+		};
+		*/
+
+		// Regular java launcher
 		// Set the server options 
 		// -- java execution path
 		// -- argument to be pass when executing the java command
 		let serverOptions: ServerOptions = {
 			command: excecutable,
 			args: [...args, main],
-			options: {}
+			options: {
+			}
 		};
 
-		// Options to control the language client
 		let clientOptions: LanguageClientOptions = {
-			// Register the server for plain text documents
-			documentSelector: [{ scheme: 'file', language: 'inform6' }]
+			documentSelector: [{ scheme: 'file', language: 'inform6' }],
+			//synchronize: { fileEvents: workspace.createFileSystemWatcher('**/*.*')},
 		};
 
-		// Create the language client and start the client.
-		let disposable = new LanguageClient('inform6', 'Inform 6 Language Server', serverOptions, clientOptions).start();
-
-		vscode.window.showInformationMessage('Inform 6 LSP client activated!');
-		// Disposables to remove on deactivation.
+		let lc = new LanguageClient('inform6', 'Inform 6 Language Server', serverOptions, clientOptions);
+		lc.trace = Trace.Verbose;
+		let disposable = lc.start();
+		vscode.window.showInformationMessage('Inform 6 LSP client is activated');
 		context.subscriptions.push(disposable);
 	}
 }
 
-// this method is called when your extension is deactivated
 export function deactivate() { 
-	console.log('Your extension "Inform 6 LSP client" is now deactivated!');
+	console.log('"Inform 6 LSP client" extension is now deactivated!');
 }
