@@ -5,10 +5,12 @@ Inform 6 extension is a client for the ls4Inform Language Server that provides l
 ## Installation
 
 * Easiest: search for the extension in the vscode extension pane: "inf6langtools" and install it. 
- _OR_ Download the file https://github.com/toerob/inf6langtools/blob/master/inf6langtools-0.1.0-alpha.vsix
 
-* Install the plugin by opening the extension pane to the left, select the top bar menu button (...) and choose "Install from VSIX..."
-* Select the downloaded file and you are good to go
+_OR_:
+ 
+ * Download the file https://github.com/toerob/inf6langtools/blob/master/inf6langtools-0.1.0-alpha.vsix
+ * Install the plugin by opening the extension pane to the left, select the top bar menu button (...) and choose "Install from VSIX..."
+ * Select the downloaded file and you are good to go
 
 NOTE: Library folders (or any unexplicit include directive) will need to be referenced via comments with compiler directive include_path or language at the top of the source file, the same way done in inform source files, e.g:
 
