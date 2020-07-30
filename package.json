@@ -1,9 +1,13 @@
 {
 	"name": "inf6langtools",
-	"publisher": "tomasoberg",
+	"publisher": "eldur",
 	"displayName": "inf6langtools",
-	"description": "Inform 6 extension that provides language utilities such as outliner, mapper etc.",
-	"version": "0.0.1",
+	"description": "Inform 6 extension is a client for the ls4Inform Language Server that provides language utilities such as outliner, cross-reference etc.",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/toerob/inf6langtools"
+	},
+	"version": "0.1.0-alpha",
 	"engines": {
 		"vscode": "^1.45.0"
 	},
@@ -24,13 +28,13 @@
 		"vscode-languageclient": "5.1.1"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.45.0",
 		"@types/glob": "^7.1.1",
 		"@types/mocha": "^7.0.2",
-		"@types/node": "^13.11.0",
-		"eslint": "^6.8.0",
-		"@typescript-eslint/parser": "^2.30.0",
+		"@types/node": "^13.13.15",
+		"@types/vscode": "^1.45.0",
 		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"@typescript-eslint/parser": "^2.30.0",
+		"eslint": "^6.8.0",
 		"glob": "^7.1.6",
 		"mocha": "^7.1.2",
 		"typescript": "^3.8.3",
