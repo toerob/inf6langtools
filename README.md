@@ -2,10 +2,14 @@
 
 Inform 6 extension is a client for the ls4Inform Language Server that provides language utilities such as outliner, cross-reference etc.
 
+## Installation
+
+Install the plugin with the 
+
 ## Features
 
-It is bundled with an LSP implementation written in Java (with XText) 
-https://github.com/toerob/ls4inform6
+The extension is bundled with an LSP implementation written in Java (with XText) that can be used with any editor supporting the Language Server Protocol 
+Source code at: https://github.com/toerob/ls4inform6
 
 ## Requirements
 
