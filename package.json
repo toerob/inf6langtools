@@ -1,13 +1,13 @@
 {
 	"name": "inf6langtools",
-	"publisher": "eldur",
+	"publisher": "toerob",
 	"displayName": "inf6langtools",
 	"description": "Inform 6 extension is a client for the ls4Inform Language Server that provides language utilities such as outliner, cross-reference etc.",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/toerob/inf6langtools"
 	},
-	"version": "0.1.0-alpha",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.45.0"
 	},
