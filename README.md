@@ -1,10 +1,11 @@
 # inf6langtools README
 
-The inf6langtools is an extension to provide Language assistance for Inform6. 
+Inform 6 extension is a client for the ls4Inform Language Server that provides language utilities such as outliner, cross-reference etc.
 
 ## Features
 
-It is bundled with an LSP implementation written in Java (with XText)
+It is bundled with an LSP implementation written in Java (with XText) 
+https://github.com/toerob/ls4inform6
 
 ## Requirements
 
@@ -17,5 +18,5 @@ Java JRE 10.
 ## Release Notes
 
 
-### 1.0.0
-
+### 0.1.0
+This is an alpha release made purely for the sake of it might alreadt be useful to the community at the present stage. 
