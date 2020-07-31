@@ -36,7 +36,7 @@ Java JRE 10.
 
 ## License and credit
 
-The language Server for Inform 6 (bundled with this client) is powered by the XText framework (https://www.eclipse.org/Xtext/index.html) licensed under the EPL 2.0 license (https://www.eclipse.org/legal/epl-2.0/). Source code available at: https://github.com/toerob/ls4inform6
+The language Server for Inform 6 (bundled with this client with source code available at: https://github.com/toerob/ls4inform6) is powered by the XText framework (https://www.eclipse.org/Xtext/index.html) licensed under the EPL 2.0 license (https://www.eclipse.org/legal/epl-2.0/). 
 
 ## Extension Settings
 
