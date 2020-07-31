@@ -1,5 +1,4 @@
 /* --------------------------------------------------------------------------------------------
- * Copyright (c) 2020 Tomas Öberg 
  * Built from the example provided by Microsoft and licensed under the MIT License. 
  * See License.txt in the project root for license information.
  * ------------------------------------------------------------------------------------------ */
