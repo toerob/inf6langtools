@@ -35,7 +35,7 @@ This is not a fully featured language server yet. It is more or less an outliner
 Java JRE 10. 
 
 ## License and credit
-This extension is licensed under MIT License. The language Server for Inform 6 (bundled with this client and with source code available at: https://github.com/toerob/ls4inform6) is powered by the XText framework (https://www.eclipse.org/Xtext/index.html) licensed under the EPL 2.0 license (https://www.eclipse.org/legal/epl-2.0/). 
+The language Server for Inform 6 (bundled with this client and with source code available at: https://github.com/toerob/ls4inform6) is powered by the XText framework (https://www.eclipse.org/Xtext/index.html) licensed under the EPL 2.0 license (https://www.eclipse.org/legal/epl-2.0/). 
 
 ## Extension Settings
 
